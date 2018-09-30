@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="scroll-btn" onclick="scrollL()" id="scrollL">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M14.71 6.71c-.39-.39-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41z"/></svg>
+    </div>
+    <div class="scroll-btn" onclick="scrollR()" id="scrollR">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+    </div>
+    <div id="tags">
+        <div class="tag-wrapper">
+            <span>Tags: </span>
+            {% for tag in page.tags %}
+            <a href="{{ site.url }}/tags.html/#{{ tag }}" class="tag">
+                #{{ tag }}
+            </a>
+            {% endfor %}
+            {% for tag in site.tags %}
+            <a href="{{ site.url }}/tags.html/#{{ tag[0] }}" class="tag" id="all-tags">
+                #{{ tag[0] }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!--
+<a href="/tags/{{ tag[0] }}/"
+style="font-size: {{ tag[1] | size | times: 2 | plus: 10 }}px">
+{{ tag[0] }} |
+</a> -->

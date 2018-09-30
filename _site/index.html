@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<!-- Plain Description -->
+	<title>Home | Blog</title>
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="http://localhost:4000/css/app.min.css">
+	<link rel="stylesheet" href="http://localhost:4000/css/home.min.css">
+	<link rel="stylesheet" href="http://localhost:4000/css/theme.min.css" id="theme" disabled>
+	<link rel="stylesheet" href="http://localhost:4000/css/visit.min.css" id="visit" disabled>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+	<meta name="theme-color" content="#808080">
+	<meta name="application-name" content="Blog">
+	<meta name="description" content="Blog">
+	<meta name="keywords" content="blog">
+	<meta name="author" content="Rohit Parida">
+	<link rel="manifest" href="http://localhost:4000/manifest.json">
+
+</head>
+
+<body>
+	<div class="appbar">
+    <div class="dark" onclick="darker()">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+        <g id="Bounding_Boxes">
+        	<g id="ui_x5F_spec_x5F_header_copy_3">
+        	</g>
+        	<path fill="none" d="M0,0h24v24H0V0z"/>
+        </g>
+        <g id="Outline_1_">
+        	<g id="ui_x5F_spec_x5F_header_copy_4">
+        	</g>
+        	<g>
+        		<path d="M20,8.69V4h-4.69L12,0.69L8.69,4H4v4.69L0.69,12L4,15.31V20h4.69L12,23.31L15.31,20H20v-4.69L23.31,12L20,8.69z M18,14.48
+        			V18h-3.52L12,20.48L9.52,18H6v-3.52L3.52,12L6,9.52V6h3.52L12,3.52L14.48,6H18v3.52L20.48,12L18,14.48z"/>
+        		<path d="M12.29,7c-0.74,0-1.45,0.17-2.08,0.46c1.72,0.79,2.92,2.53,2.92,4.54s-1.2,3.75-2.92,4.54c0.63,0.29,1.34,0.46,2.08,0.46
+        			c2.76,0,5-2.24,5-5C17.29,9.24,15.05,7,12.29,7z"/>
+        	</g>
+        </g>
+        </svg>
+    </div>
+    <a href="http://localhost:4000">
+        <h1 class="title">Blog</h1>
+    </a>
+    <a href="mailto:rohitkparida@gmail.com" title="Mail me">
+        <div class="mail">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="none" d="M0 0h24v24H0z"/>
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+        </svg>
+        </div>
+    </a>
+</div>
+<div class="appbar" id="raised">
+    <div class="dark" onclick="darker()">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+    <g id="Bounding_Boxes">
+        <g id="ui_x5F_spec_x5F_header_copy_3">
+        </g>
+        <path fill="none" d="M0,0h24v24H0V0z"/>
+    </g>
+    <g id="Outline_1_">
+        <g id="ui_x5F_spec_x5F_header_copy_4">
+        </g>
+        <g>
+            <path d="M20,8.69V4h-4.69L12,0.69L8.69,4H4v4.69L0.69,12L4,15.31V20h4.69L12,23.31L15.31,20H20v-4.69L23.31,12L20,8.69z M18,14.48
+                V18h-3.52L12,20.48L9.52,18H6v-3.52L3.52,12L6,9.52V6h3.52L12,3.52L14.48,6H18v3.52L20.48,12L18,14.48z"/>
+            <path d="M12.29,7c-0.74,0-1.45,0.17-2.08,0.46c1.72,0.79,2.92,2.53,2.92,4.54s-1.2,3.75-2.92,4.54c0.63,0.29,1.34,0.46,2.08,0.46
+                c2.76,0,5-2.24,5-5C17.29,9.24,15.05,7,12.29,7z"/>
+        </g>
+    </g>
+    </svg>
+    </div>
+    <a href="http://localhost:4000">
+    <h1 class="title">Blog</h1>
+</a>
+    <a href="mailto:rohitkparida@gmail.com" title="Mail me">
+    <div class="mail">
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="none" d="M0 0h24v24H0z"/>
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+    </svg>
+    </div>
+</a>
+</div>
+	<div class="wrapper">
+		<div class="content">
+			<ul class="myposts">
+
+    <a href="http://localhost:4000/2016/05/30/i-love-pizza.html">
+        <li class="card">
+        <div class="sub-title">
+        <p>Blogging Like a Hacker</p>
+        </div>
+        <img class="thumbnail" src="http://localhost:4000/img/image.jpg" />
+        <div class="info">
+        <span id="postDate">May 30, 2016&nbsp; • </span>
+        <span id="postCount">2 mins</span>
+        <a href="http://localhost:4000/tags.html/#one" class="tag">one</a>
+        </div>
+        </li>
+    </a>
+
+    <a href="http://localhost:4000/2016/05/30/i-love-pizza-Copy.html">
+        <li class="card">
+        <div class="sub-title">
+        <p>Blogging Like a Hacker</p>
+        </div>
+        <img class="thumbnail" src="http://localhost:4000/img/image.jpg" />
+        <div class="info">
+        <span id="postDate">May 30, 2016&nbsp; • </span>
+        <span id="postCount">2 mins</span>
+        <a href="http://localhost:4000/tags.html/#one" class="tag">one</a>
+        </div>
+        </li>
+    </a>
+
+    <a href="http://localhost:4000/2016/05/30/i-love-pizza-Copy-(6).html">
+        <li class="card">
+        <div class="sub-title">
+        <p>Blogging Like a Hacker</p>
+        </div>
+        <img class="thumbnail" src="http://localhost:4000/img/image.jpg" />
+        <div class="info">
+        <span id="postDate">May 30, 2016&nbsp; • </span>
+        <span id="postCount">2 mins</span>
+        <a href="http://localhost:4000/tags.html/#one" class="tag">one</a>
+        </div>
+        </li>
+    </a>
+
+    <a href="http://localhost:4000/2016/05/30/i-love-pizza-Copy-(5).html">
+        <li class="card">
+        <div class="sub-title">
+        <p>Blogging Like a Hacker</p>
+        </div>
+        <img class="thumbnail" src="http://localhost:4000/img/image.jpg" />
+        <div class="info">
+        <span id="postDate">May 30, 2016&nbsp; • </span>
+        <span id="postCount">2 mins</span>
+        <a href="http://localhost:4000/tags.html/#one" class="tag">one</a>
+        </div>
+        </li>
+    </a>
+
+    <a href="http://localhost:4000/2016/05/30/i-love-pizza-Copy-(4).html">
+        <li class="card">
+        <div class="sub-title">
+        <p>Blogging Like a Hacker</p>
+        </div>
+        <img class="thumbnail" src="http://localhost:4000/img/image.jpg" />
+        <div class="info">
+        <span id="postDate">May 30, 2016&nbsp; • </span>
+        <span id="postCount">2 mins</span>
+        <a href="http://localhost:4000/tags.html/#one" class="tag">one</a>
+        </div>
+        </li>
+    </a>
+
+    <a href="http://localhost:4000/2016/05/30/i-love-pizza-Copy-(3).html">
+        <li class="card">
+        <div class="sub-title">
+        <p>Blogging Like a Hacker</p>
+        </div>
+        <img class="thumbnail" src="http://localhost:4000/img/image.jpg" />
+        <div class="info">
+        <span id="postDate">May 30, 2016&nbsp; • </span>
+        <span id="postCount">2 mins</span>
+        <a href="http://localhost:4000/tags.html/#one" class="tag">one</a>
+        </div>
+        </li>
+    </a>
+
+    <a href="http://localhost:4000/2016/05/30/i-love-pizza-Copy-(2).html">
+        <li class="card">
+        <div class="sub-title">
+        <p>Blogging Like a Hacker</p>
+        </div>
+        <img class="thumbnail" src="http://localhost:4000/img/image.jpg" />
+        <div class="info">
+        <span id="postDate">May 30, 2016&nbsp; • </span>
+        <span id="postCount">2 mins</span>
+        <a href="http://localhost:4000/tags.html/#one" class="tag">one</a>
+        </div>
+        </li>
+    </a>
+
+</ul>
+
+		</div>
+		<div class="sub-content">
+			<div class="card author">
+    <img class="thumbnail" src="https://lh3.googleusercontent.com/-eSEBw9deZ4Y/AAAAAAAAAAI/AAAAAAAAAAA/AAN31DWqRayXI-ik616dYavJ2oU8tDXetA/s192-c-mo/photo.jpg">
+    <div class="sub-title">
+        <span>John Doe</span><br>
+        <span class="info">Author</span>
+    </div>
+    <span class="sub-title" id="about">The spectacle before us was indeed sublime.</span>
+    <a href="#">
+    <button>
+    <span>LEARN MORE</span>
+    </button>
+</a>
+</div>
+			<div class="card">
+    <div class="scroll-btn" onclick="scrollL()" id="scrollL">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M14.71 6.71c-.39-.39-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41z"/></svg>
+    </div>
+    <div class="scroll-btn" onclick="scrollR()" id="scrollR">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+    </div>
+    <div id="tags">
+        <div class="tag-wrapper">
+            <span>Tags: </span>
+            
+            
+            <a href="http://localhost:4000/tags.html/#one" class="tag" id="all-tags">
+                #one
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+<!--
+<a href="/tags//"
+style="font-size: 10px">
+ |
+</a> -->
+		</div>
+		<footer class="card">
+    <span>About</span>
+    <span>About</span>
+    <span>About</span>
+    <span>About</span>
+    <span>About</span>
+</footer>
+	</div>
+</body>
+<script src="http://localhost:4000/js/jquery.min.js"></script>
+<script src="http://localhost:4000/js/app.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8942166901166030",
+        enable_page_level_ads: true
+    });
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126212040-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126212040-1');
+</script>
+
+</html>

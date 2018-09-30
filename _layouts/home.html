@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html class="no-js">
+{% include head.html %}
+
+<body>
+	{% include appbar.html %}
+	<div class="wrapper">
+		<div class="content">
+			{{ content }}
+		</div>
+		<div class="sub-content">
+			{% include author.html %}
+			{% include tags.html %}
+		</div>
+		{% include footer.html %}
+	</div>
+</body>
+{% include scripts.html %}
+
+</html>

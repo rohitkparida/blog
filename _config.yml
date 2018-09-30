@@ -1,0 +1,25 @@
+# Site settings
+title: "Blog"
+tagline: "Rohit Parida"
+url: "https://rohitkparida.github.io/blog"
+# Social
+socialimg: img.jpg
+facebook: rohitparida27
+twitter: rohitkparida
+github: rohitkparida
+googleplus: rohitkparida
+instagram: isnt_rohit
+# Contact
+phone: "1234567890"
+email: "rohitkparida@gmail.com"
+# Use this for production
+sass:
+  sass_dir: css
+include: ['_pages']
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title:output_ext
+exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
