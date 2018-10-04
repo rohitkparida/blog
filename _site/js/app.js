@@ -100,21 +100,29 @@
 // }
 
 
-
+// $('.dark').on('click', function() {
+//     // Just replacing the value of the 'content' attribute will not work.
+//     $('meta[name=theme-color]').remove();
+//     $('head').append('<meta name="theme-color" content="#212121">');
+// });
 
 //thmeeeeeeeee--------------------------------------
 
 if (localStorage.getItem('theme') === 'light') {
 
-    $("#theme").prop("disabled", true);
+    $(".theme").prop("disabled", true);
+    $('meta[name=theme-color]').remove();
+    $('head').append('<meta name="theme-color" content="#fafafa">');
 
 } else if (localStorage.getItem('theme') === 'dark') {
 
-    $("#theme").prop("disabled", false);
+    $(".theme").prop("disabled", false);
+    $('meta[name=theme-color]').remove();
+    $('head').append('<meta name="theme-color" content="#212121">');
 
 }
 
-var isDisabled = $("#theme").prop('disabled');
+var isDisabled = $(".theme").prop('disabled');
 if (isDisabled) {
     localStorage.setItem('theme', 'light');
 } else {
@@ -124,16 +132,28 @@ if (isDisabled) {
 function darker() {
     if (localStorage.getItem('theme') === 'light') {
 
-        $("#theme").prop("disabled", false);
+        $(".theme").prop("disabled", false);
         localStorage.setItem('theme', 'dark');
 
     } else if (localStorage.getItem('theme') === 'dark') {
 
-        $("#theme").prop("disabled", true);
+        $(".theme").prop("disabled", true);
         localStorage.setItem('theme', 'light');
 
     }
 }
+
+
+function scrollR() {
+    document.getElementById("tags").scrollBy(80, 0);
+}
+
+function scrollL() {
+    document.getElementById("tags").scrollBy(-80, 0);
+}
+
+
+
 // scrolllllll-----------------------------------
 
 $(function() {
@@ -162,19 +182,20 @@ $(function() {
 });
 
 
-
-var tagswidth = $('#tags').width();
-var tagsscroll = $('#tags').scrollLeft();
-var scrollbtn = $('.scroll-btn>svg');
-// alert(tagsscroll)
-console.log(tagswidth);
-if (tagsscroll >= 50) {
-    $('#scrollL').css('display', 'block');
-    $('#scrollL').css('opacity', '1');
-} else {
-    $('#scrollL').css('display', 'none');
-    $('#scrollL').css('opacity', '0');
-}
+$('#tags').scroll(function() {
+    var tagswidth = $('#tags').width();
+    var tagsscroll = $('#tags').scrollLeft();
+    var scrollbtn = $('.scroll-btn>svg');
+    // alert(tagsscroll)
+    console.log(tagsscroll);
+    if (tagsscroll >= 50) {
+        $('#scrollL').css('pointer-events', 'unset');
+        $('#scrollL').css('opacity', '1');
+    } else {
+        $('#scrollL').css('pointer-events', 'none');
+        $('#scrollL').css('opacity', '0');
+    }
+});
 
 
 
@@ -192,15 +213,6 @@ if (tagsscroll >= 50) {
 
 
 
-
-
-function scrollR() {
-    document.getElementById("tags").scrollBy(60, 0);
-}
-
-function scrollL() {
-    document.getElementById("tags").scrollBy(-60, 0);
-}
 
 
 

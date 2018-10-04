@@ -15,10 +15,10 @@ title: Tag
 			<div class="sub-title">
 			<p>{{ post.title}}</p>
 			</div>
-			<img class="thumbnail" src="{{ site.url }}/img/social.jpg">
+			<img class="thumbnail" src="{{ site.url }}/img/{{ post.image[0] }}">
 			<div class="info">
 	        <span class="postDate">{{ post.date | date: "%b %-d, %Y"}}&nbsp; • </span>
-	        <span class="postCount">{{ post.content | number_of_words }} words</span>
+	        <span id="postCount">{{ post.content | number_of_words | divided_by: 265 | add: }} min read</span>
 	        </div>
 	        </li>
         </a>

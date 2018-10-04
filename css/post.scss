@@ -1,5 +1,5 @@
 .wrapper{
-    border-top: 1px solid rgba(0,0,0,0.12);
+    border-top: 1px solid rgba(0,0,0,0.2);
 }
 
 #title {
@@ -23,7 +23,7 @@
 }
 
 #hero {
-    border: 1px solid rgba(0,0,0,0.12);
+    border: 1px solid rgba(0,0,0,0.2);
     border-radius: 8px;
     width: 100%;
     margin-bottom: 20px;
@@ -52,15 +52,11 @@
     display: none;
 }
 
-
 @media (min-width: 1024px) {
     p{
         line-height: 1.5;
     }
-    #hero {
-        border-radius: 16px;
-    }
-    .author{
-        border-top: none;
+    .sub-content{
+        margin-top: 16px;
     }
 }

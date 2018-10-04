@@ -4,7 +4,7 @@ title: Blogging Like a Hacker
 tags: [one]
 image: [image.jpg]
 ---
-![image-title-here]({{ site.url }}/img/{{ page.image[0] }}){:id="hero"}
+![hero]({{ site.url }}/img/{{ page.image[0] }}){:id="hero"}
 
 
 

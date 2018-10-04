@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Blogging Like a Hacker
-tags: [one]
+tags: [1, 2, 3, 4, 5, 6, 7, 8, 9, 9]
 image: [image.jpg]
 ---
-![image-title-here]({{ site.url }}/img/{{ page.image[0] }}){:id="hero"}
+![hero]({{ site.url }}/img/{{ page.image[0] }}){:id="hero"}
 
 
 

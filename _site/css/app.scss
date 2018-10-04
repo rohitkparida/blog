@@ -88,7 +88,7 @@ span::-webkit-scrollbar {
 
 .wrapper {
     position: relative;
-    margin: 56px 16px 0;
+    margin: 56px 16px 16px;
 }
 
 .title {
@@ -134,6 +134,16 @@ svg {
     overflow: scroll;
 }
 
+.fade {
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+    background: -webkit-linear-gradient(#fafafa00, #fafafa 140%);
+    background: -o-linear-gradient(#fafafa00, #fafafa 140%);
+    background: linear-gradient(#fafafa00, #fafafa 140%);
+}
+
 #about {
     margin-left: 4px;
     width: 100%;
@@ -141,7 +151,7 @@ svg {
 
 .card {
     padding: 12px;
-    border: 1px solid #0000001e;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     right: 0;
     position: relative;
@@ -164,13 +174,18 @@ footer {
     float: right;
     display: inline-block;
     height: 100%;
-    width: 74px;
-    border-left: 1px solid rgba(0,0,0,0.12);
+    width: calc(100% / 4);
+    border-left: 1px solid rgba(0,0,0,0.2);
     border-radius: 0 8px 8px 0;
     box-sizing: border-box;
     position: absolute;
     right: 0;
     top: 0;
+    overflow: hidden;
+}
+
+.thumbnail img{
+    height: 100%;
 }
 
 .author .thumbnail {
@@ -181,7 +196,7 @@ footer {
     height: 54px;
     width: 54px;
     position: unset;
-    border: 1px solid rgba(0,0,0,0.12);
+    border: 1px solid rgba(0,0,0,0.2);
 }
 
 .author button {
@@ -220,6 +235,7 @@ footer {
     width: max-content;
     padding-right: 80px;
     margin: 5.5px;
+    line-height: 24px;
 }
 
 #tags {
@@ -283,14 +299,29 @@ footer {
     text-align: center;
 }
 
-footer span {
+footer a {
     display: inline-block;
     padding: 6px 16px;
 }
+
+#qr{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+
+.contacts_btns{
+    display: inline-block;
+}
+
+.contacts_btns svg{
+    fill: rgba(0, 0, 0, 0.5);
+}
+
 @media (min-width: 425px) {
     .wrapper {
         max-width: 393px;
-        margin: 56px auto auto;
+        margin: 56px auto 16px;
     }
 }
 @media (min-width: 1024px) {
@@ -309,7 +340,7 @@ footer span {
     .sub-content {
         max-width: 320px;
         vertical-align: top;
-        margin-left: calc(50vw - (320px / 2) + (572px / 2));
+        margin: 0 calc(50vw - (320px / 2) + (572px / 2));
         position: fixed;
         left: 0;
         z-index: 1;
@@ -323,6 +354,7 @@ footer span {
     .tag-wrapper {
         padding: 0;
         width: unset;
+        height: unset;
     }
 
     .scroll-btn {
