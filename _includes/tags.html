@@ -9,12 +9,12 @@
         <div class="tag-wrapper">
             <span>Tags: </span>
             {% for tag in page.tags %}
-            <a href="{{ site.url }}/tags.html/#{{ tag }}" class="tag">
+            <a href="{{ site.url }}/tags.html#{{ tag }}" class="tag">
                 #{{ tag }}
             </a>
             {% endfor %}
             {% for tag in site.tags limit: 15 %}
-            <a href="{{ site.url }}/tags.html/#{{ tag[0] }}" class="tag" id="all-tags">
+            <a href="{{ site.url }}/tags.html#{{ tag[0] }}" class="tag" id="all-tags">
                 #{{ tag[0] }}
             </a>
             {% endfor %}
