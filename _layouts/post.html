@@ -16,6 +16,31 @@
         <div class="sub-content">
             {% include author.html %}
             {% include tags.html %}
+            <ul id="rposts">
+                <p>Related:</p>
+                <div class="tags">
+                    <div class="tag-wrapper">
+                        {% for post in site.posts limit: 12 %}
+                        {% if post.tags == page.tags %}
+                        {% if post.id != page.id %}
+                        <a href="{{ site.url }}{{ post.url }}">
+                            <li class="card">
+                                <div class="sub-title">
+                                    <p>{{ post.title}}</p>
+                                </div>
+                                <img class="thumbnail" src="{{ post.hero }}">
+                                <div class="info">
+                                    <span class="postDate">{{ post.date | date: "%b %-d, %Y"}}&nbsp; • &nbsp;</span>
+                                    <span id="postCount">{{ post.content | number_of_words | divided_by: 265 | add: }} min read</span>
+                                </div>
+                            </li>
+                        </a>
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </ul>
         </div>
         {% include footer.html %}
     </div>

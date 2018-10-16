@@ -106,6 +106,14 @@
 //     $('head').append('<meta name="theme-color" content="#212121">');
 // });
 
+
+
+
+
+
+
+
+
 //thmeeeeeeeee--------------------------------------
 
 if (localStorage.getItem('theme') === 'light') {
@@ -161,7 +169,7 @@ $(function() {
     var content = $(".content");
     var subContent = $(".sub-content");
     var fab = $(".fab");
-    $(window).scroll(function() {
+    $(window).on('scroll load', function() {
         var winscroll = $(window).scrollTop();
 
         if (winscroll > 0) {

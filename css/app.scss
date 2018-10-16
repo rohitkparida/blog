@@ -1,10 +1,10 @@
 // Some Style Variables
 $pri-color: #4a5cff;
 $md-light-bg: #fafafa !default;
-$md-light-fg: #fff !default; /*
+$md-light-fg: #fff !default;
+/*
 *******
 */
-
 * {
     margin: 0;
     padding: 0;
@@ -145,6 +145,7 @@ svg {
 }
 
 #about {
+    color: rgba(0,0,0,0.54);
     margin-left: 4px;
     width: 100%;
 }
@@ -156,6 +157,10 @@ svg {
     right: 0;
     position: relative;
     margin: 6px 0;
+    display: inline-block;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
 }
 
 .author .sub-title {
@@ -166,7 +171,7 @@ svg {
 .info,
 a,
 footer {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.54);
     font-size: 0.875rem;
 }
 
@@ -174,7 +179,7 @@ footer {
     float: right;
     display: inline-block;
     height: 100%;
-    width: calc(100% / 4);
+    width: 25%;
     border-left: 1px solid rgba(0,0,0,0.2);
     border-radius: 0 8px 8px 0;
     box-sizing: border-box;
@@ -184,8 +189,9 @@ footer {
     overflow: hidden;
 }
 
-.thumbnail img{
+.thumbnail img {
     height: 100%;
+    min-width: 100%;
 }
 
 .author .thumbnail {
@@ -201,7 +207,7 @@ footer {
 
 .author button {
     background: #fafafa;
-    border: 1px solid rgb(218, 220, 224);
+    border: 1px solid #dadce0;
     border-radius: 4px;
     font-size: 12px;
     height: 32px;
@@ -231,20 +237,26 @@ footer {
 }
 
 .tag-wrapper {
-    height: 19px;
     width: max-content;
-    padding-right: 80px;
-    margin: 5.5px;
-    line-height: 24px;
+    line-height: 18px;
 }
 
-#tags {
+.tags {
     position: relative;
     overflow: scroll;
+    margin: 0 12px;
 }
 
-#tags span {
-    margin: 0 4px;
+#rposts p {
+    padding: 4px;
+}
+
+#rposts .card {
+    width: unset;
+}
+
+#rposts .thumbnail {
+    display: none;
 }
 
 .paragraph a,
@@ -256,11 +268,9 @@ footer {
     margin: 0 2px;
 }
 
-.card .tag {}
-
 .scroll-btn {
     display: inline-block;
-    height: 30px;
+    height: 20px;
     width: 80px;
     position: absolute;
     z-index: 1;
@@ -281,7 +291,8 @@ footer {
 }
 
 .scroll-btn svg {
-    padding: 3px 18px;
+    height: 100%;
+    padding: 0 18px;
 }
 
 #scrollR svg {
@@ -295,7 +306,7 @@ footer {
 }
 
 footer {
-    padding: 16px 0;
+    padding: 16px 0!important !important;
     text-align: center;
 }
 
@@ -304,20 +315,19 @@ footer a {
     padding: 6px 16px;
 }
 
-#qr{
+#qr {
     display: inline-block;
     height: 40px;
     width: 40px;
 }
 
-.contacts_btns{
+.contacts_btns {
     display: inline-block;
 }
 
-.contacts_btns svg{
-    fill: rgba(0, 0, 0, 0.5);
+.contacts_btns svg {
+    fill: rgba(0, 0, 0, 0.54);
 }
-
 @media (min-width: 425px) {
     .wrapper {
         max-width: 393px;
@@ -333,8 +343,7 @@ footer a {
 
     .content,
     footer {
-        margin-right: 32px;
-        max-width: 540px;
+        max-width: 530px;
     }
 
     .sub-content {
@@ -352,12 +361,23 @@ footer a {
     }
 
     .tag-wrapper {
-        padding: 0;
         width: unset;
-        height: unset;
     }
 
     .scroll-btn {
         display: none;
+    }
+
+    #rposts .card {
+        width: -webkit-fill-available;
+    }
+
+    .tags {
+        margin: 0;
+        max-height: 300px;
+        overflow: scroll;
+    }
+    #rposts .thumbnail{
+        display: block;
     }
 }

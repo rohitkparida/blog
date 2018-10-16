@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Blogging Like a Hacker
 tags: [one]
-image: [image.jpg]
+hero: https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
-![hero]({{ site.url }}/img/{{ page.image[0] }}){:id="hero"}
+![hero]({{ page.hero }}){:id="hero"}
 
 
 

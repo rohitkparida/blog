@@ -2,6 +2,9 @@
 title: "Blog"
 tagline: "Rohit Parida"
 url: "https://rohitkparida.github.io/blog"
+paginate: 4
+plugins:
+  - jekyll-paginate
 # Social
 socialimg: img.jpg
 facebook: rohitparida27
@@ -10,7 +13,6 @@ github: rohitkparida
 googleplus: rohitkparida
 instagram: isnt_rohit
 # Contact
-phone: "1234567890"
 email: "rohitkparida@gmail.com"
 # Use this for production
 sass:
