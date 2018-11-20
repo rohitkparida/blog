@@ -23,7 +23,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": "https://rohitkparida.github.io/blog/",
+    "start_url": "http://localhost:4000",
     "background_color": "#212121",
     "theme_color": "#212121"
 }
